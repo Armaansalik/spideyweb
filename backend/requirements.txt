@@ -1,0 +1,11 @@
+fastapi>=0.111
+uvicorn[standard]>=0.30
+pydantic>=2.7
+websockets>=12.0
+
+# Optional, only needed if you extend the backend with server-side ML
+# (a custom PyTorch gesture classifier, YOLO object detection, etc.).
+# Not required to run the server above.
+# numpy>=1.26
+# torch>=2.2
+# ultralytics>=8.2   # YOLOv8, if you wire in server-side object detection

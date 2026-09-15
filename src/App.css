@@ -1,0 +1,102 @@
+.app {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 30%, #0d1626 0%, #050810 65%, #020306 100%);
+}
+
+.app canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.app__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(3, 6, 12, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.app__overlay-card {
+  max-width: 420px;
+  padding: 28px 32px;
+  text-align: center;
+  background: linear-gradient(160deg, rgba(15, 28, 45, 0.75), rgba(8, 14, 24, 0.65));
+  border: 1px solid rgba(120, 210, 255, 0.25);
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+}
+
+.app__overlay-title {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: #7fe8ff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 12px rgba(90, 210, 255, 0.6);
+}
+
+.app__overlay-title--alert {
+  color: #ff5470;
+  text-shadow: 0 0 12px rgba(255, 84, 112, 0.6);
+}
+
+.app__overlay-sub {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(210, 230, 245, 0.75);
+}
+
+.app__spinner {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  border: 2.5px solid rgba(120, 210, 255, 0.15);
+  border-top-color: #7fe8ff;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app__help {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 15;
+  pointer-events: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 70vw;
+}
+
+.app__help-pill {
+  font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: rgba(200, 225, 240, 0.7);
+  background: rgba(10, 18, 30, 0.55);
+  border: 1px solid rgba(120, 210, 255, 0.18);
+  border-radius: 20px;
+  padding: 6px 14px;
+  backdrop-filter: blur(6px);
+}
+
+.app__help-pill--accent {
+  color: #ff9db0;
+  border-color: rgba(255, 84, 112, 0.35);
+}

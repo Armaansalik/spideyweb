@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #050810;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Rajdhani', 'Segoe UI', sans-serif;
+  color: #eafcff;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(90, 210, 255, 0.3);
+}
